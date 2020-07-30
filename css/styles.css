@@ -1,0 +1,83 @@
+* {
+   box-sizing: border-box;
+   margin:0;
+   padding:0;
+ }
+ 
+ html {
+   font-family:'Roboto', sans-serif;
+   font-size:18px;
+   color:rgb(44, 44, 44);
+ }
+
+ body {
+   min-height: 100vh;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-flow: row wrap;
+   background: #FDC830;   /*Fallback*/
+   background: -webkit-linear-gradient(to top, #F37335, #FDC830); 
+   background: linear-gradient(to top, #F37335, #FDC830);
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-position: center;
+ }
+ 
+ #container {
+   width: 80%;
+ }
+
+ #headline {
+   font-family: 'Roboto Condensed', sans-serif;
+   font-size:5rem;
+   font-weight:300;
+   line-height: 1.35;
+ }
+ 
+ #input {
+   font-family: 'Roboto, sans-serif';
+   font-size: 2.5rem;
+   color:rgb(44, 44, 44);;
+   padding: 10px;
+   border-radius: 0px;
+   border:none;
+ }
+
+ ::placeholder{
+   font-family: 'Roboto', sans-serif;
+   font-size:2.5rem;
+ }
+
+ .btn {
+    font-family:'Roboto', sans-serif;
+    font-size:2.5rem;
+    padding: 10px 10px;
+    background: transparent;
+    border: 1px solid rgb(44, 44, 44);
+    width: 200px;
+ }
+
+ .btn:hover{
+    background:rgb(44, 44, 44);
+    color: rgb(255, 255, 255);
+ }
+
+ #this-day-div{
+
+ }
+
+ #this-day-head{
+   font-family: 'Roboto Condensed', sans-serif;
+   font-size:4rem;
+   font-weight:300;
+   
+ }
+
+ #this-day-text {
+   font-size:2.5rem;
+   line-height: 1.35;
+ }
+
+ 
+ 
