@@ -8,22 +8,20 @@
   <link rel="stylesheet" href="./css/styles.css">
   <!-- Google Fonts - Montserrat -->
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,700;1,400&display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Condensed:wght@300;400&display=swap" rel="stylesheet">
-  <!-- Flat Icon -->
-  <link rel="stylesheet" type="text/css" href="./css/flaticon.css">
-
-
-
+  
   <body>
     <div id="container">
-      <p id = "cake"><i class="flaticon-birthday-cake"></i></p>
       <h1 id="headline">Enter your birthday to find out what day of the week you were born.</h1>
-      <div id="input-div">
-        <input type="text" id="input" name="input" placeholder='January 1, 2020'> 
-        <br>
-        <button id="submit" class = "btn" >Enter</button>
-        <button id="reset" class = "btn">Reset</button>
+      <div id="top">
+         <div id = "input-div">
+            <input type="text" id="input" name="input" placeholder='January 1, 2020'> 
+            <img src="https://img.icons8.com/carbon-copy/100/000000/calendar.png"/>
+         </div>
+         <br>
+         <button id="submit" class = "btn" >Enter</button>
+         <button id="reset" class = "btn">Reset</button>
       </div>
-      <div id="this-day-div">
+      <div id="bottom">
          <h2 id="this-day-head">On your birthday...</h2>
          <p id = "this-day-text">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Arcu non odio euismod lacinia at quis risus.
@@ -31,7 +29,8 @@
       </div>
     </div>
     <footer>
-      <div>Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+         <p id = "copyright">&copy; &nbsp;2020&nbsp;|&nbsp Casey Pitman</p>
+         <a id = "attribution" href="https://icons8.com/icon/67438/calendar">Calendar icon by Icons8</a>
     </footer>
 
     <script src="app.js"></script>
