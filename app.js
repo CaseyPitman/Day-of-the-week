@@ -50,8 +50,10 @@ const init = async () =>{
    document.getElementById('input').value = "";
   
    document.getElementById('top').style.display = 'inline-block';
+   // document.getElementById('top').style.display = 'none';
 
    document.getElementById('bottom').style.display = 'none';
+   // document.getElementById('bottom').style.display = 'inline-block';
 
 // GET TODAY'S DATE AND MAKE IT THE PLACEHOLDER DATE;
    let today = new Date();

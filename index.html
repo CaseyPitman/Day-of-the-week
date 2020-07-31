@@ -4,22 +4,23 @@
   <head>
     <meta charset="UTF-8">
     <title>Day of the Week</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/styles.css">
+    <!-- Google Fonts - Montserrat -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,700;1,400&display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Condensed:wght@300;400&display=swap" rel="stylesheet">
   </head>
-  <link rel="stylesheet" href="./css/styles.css">
-  <!-- Google Fonts - Montserrat -->
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,700;1,400&display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Condensed:wght@300;400&display=swap" rel="stylesheet">
-  
   <body>
     <div id="container">
+
       <div id="top">
         <h1 id="headline">Enter your birthday</h1>
-        <img id = "calendar" src="https://img.icons8.com/carbon-copy/200/000000/calendar.png"/>
+        <img id = "calendar" class = 'icon' src="https://img.icons8.com/carbon-copy/100/000000/calendar.png"/>
         <input type="text" id="input" name="input" placeholder='' value = 'none'> 
         <button id="submit" class = "btn" >Enter</button>
       </div>
 
       <div id="bottom">
-        <img id = "cake" src="https://img.icons8.com/ios/100/000000/birthday.png"/>
+        <img id = "cake" class = 'icon' src="https://img.icons8.com/ios/100/000000/birthday.png"/>
         <h2 id="day-head">You were born on a {%DAY%}</h2> 
         <p id = "day-text">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
@@ -28,7 +29,7 @@
       </div>
 
     </div>
-    
+
     <footer>
       <p id = "copyright">&copy; &nbsp;2020&nbsp;|&nbsp Casey Pitman</p>
       <a id = "attribution" href="https://icons8.com/icon/67438/calendar">Calendar icon by Icons8</a>
