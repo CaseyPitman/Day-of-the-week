@@ -37,7 +37,6 @@ body {
   margin: 70px auto;
   height: 100%;
   width:100%;
-  
 }
 
 #headline {
@@ -150,4 +149,45 @@ footer {
 #attribution:hover {
   color: rgb(44, 44, 44);
 }
+
+
+
+/* LANDSCAPE PHONE STYLES */
+
+
+@media only screen 
+  and (max-device-width: 1000px) 
+  and (orientation: landscape) { 
+
+    body {
+      height: 100%;
+    }
+    #top, 
+    #bottom {
+      margin-top:20px;
+    }
+
+    #input, 
+    .btn {
+      width:50%;
+    }
+
+
+    #footer {
+      position: relative;
+      bottom: 10px;
+    }
+
+    #copyright {
+      margin: 0 0 5px;
+    }
+
+
+  
+}
+
+
+
+
+/* TABLET STYLES */
  

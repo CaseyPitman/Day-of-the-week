@@ -2,19 +2,20 @@
 const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
 const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
 
+//DISPLAY RESULTS
 const display = (day, history = '') => {
 
    document.getElementById('day-text').innerText = history;
    document.getElementById('top').style.display = 'none';
    document.getElementById('bottom').style.display = 'inline-block';
-   document.getElementById('day-head').innerText = `You were born on a ${day}`;
+   document.getElementById('day-head').innerText = `You were born on a ${day}.`;
 
    //ATTRIBUTION CHANGES ON CLICK
    document.getElementById('attribution-calendar').style.display = 'none';
    document.getElementById('attribution-cake').style.display = 'inline-block';
 }
 
-//Determine what day of the week the date is. 
+//DETERMINE THE DAY OF THE WEEK THE INPUT DATE REPRESENTS
 const findDay = async () => {
    //Get input
    let inputDate = document.getElementById('input').value;
@@ -32,12 +33,12 @@ const findDay = async () => {
       init();
       return;
    }
-   
+   //Call to retrieve a 'this day in history' object
    let history = await thisDay(birthdate);
    display(dayOfWeek, history);
 }
 
-//Retrieve 'this day in history' info.
+//RETRIEVE THIS DAY IN HISTORY
 const thisDay = async (date) =>{
    let data, history;
    let month = date.getMonth();
@@ -54,13 +55,13 @@ const thisDay = async (date) =>{
    }
 }
 
-//Initialize app
+//INITIALIZE
 const init = async () =>{
    document.getElementById('input').value = "";
    document.getElementById('top').style.display = 'inline-block';
    document.getElementById('bottom').style.display = 'none';
 
-// GET TODAY'S DATE AND MAKE IT THE PLACEHOLDER DATE;
+   // GET TODAY'S DATE AND MAKE IT THE PLACEHOLDER DATE;
    let today = new Date();
    let month = today.getMonth();
    month  = months[month];
@@ -74,7 +75,7 @@ const init = async () =>{
    document.getElementById('attribution-cake').style.display = 'none';
 }
 
-//Initialize
+//CALL INITIALIZE ON STARTUP
 init();
 
 //EVENT LISTENERS
