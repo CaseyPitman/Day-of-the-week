@@ -10,7 +10,7 @@ const display = (day, history = '') => {
    document.getElementById('bottom').style.display = 'inline-block';
    document.getElementById('day-head').innerText = `You were born on a ${day}.`;
 
-   //ATTRIBUTION CHANGES ON CLICK
+   //Attribution will change on click. 
    document.getElementById('attribution-calendar').style.display = 'none';
    document.getElementById('attribution-cake').style.display = 'inline-block';
 }
@@ -23,7 +23,7 @@ const findDay = async () => {
       alert("Please enter your birthdate.");
       return;
    }
-
+   //Figure out what day of the week the date was/is.
    let birthdate = new Date(inputDate);
    let day = birthdate.getDay();
    let dayOfWeek = days[day];
@@ -35,12 +35,13 @@ const findDay = async () => {
    }
    //Call to retrieve a 'this day in history' object
    let history = await thisDay(birthdate);
+   //Call for display
    display(dayOfWeek, history);
 }
 
 //RETRIEVE THIS DAY IN HISTORY
 const thisDay = async (date) =>{
-   let data, history;
+   let history;
    let month = date.getMonth();
    let day = date.getDate();
    try {
@@ -57,11 +58,12 @@ const thisDay = async (date) =>{
 
 //INITIALIZE
 const init = async () =>{
+   //Set initial display
    document.getElementById('input').value = "";
    document.getElementById('top').style.display = 'inline-block';
    document.getElementById('bottom').style.display = 'none';
 
-   // GET TODAY'S DATE AND MAKE IT THE PLACEHOLDER DATE;
+   // Make today's date the placeholder
    let today = new Date();
    let month = today.getMonth();
    month  = months[month];
@@ -70,7 +72,7 @@ const init = async () =>{
    let date = `${month} ${day}, ${year}`;
    document.getElementById('input').setAttribute('placeholder', date);
 
-   //SET ATTRIBUTION
+   //Set the attribution
    document.getElementById('attribution-calendar').style.display = 'inline-block';
    document.getElementById('attribution-cake').style.display = 'none';
 }
