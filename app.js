@@ -77,6 +77,14 @@ const init = async () =>{
 //Initialize
 init();
 
-//Event listeners
+//EVENT LISTENERS
+
+//Click submit button
 document.getElementById('submit').addEventListener('click', findDay);
+//Enter in input field
+document.getElementById('input').addEventListener("keyup", function(event) {
+   if (event.key === "Enter" || event.keyCode === 13) {
+       findDay();
+   }});
+//Click reset button
 document.getElementById("reset").addEventListener('click', init);
